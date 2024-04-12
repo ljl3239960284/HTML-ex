@@ -1,0 +1,22 @@
+label,input{
+  margin-bottom: 5px;
+  text-align:left;
+}
+.choose{
+  border-radius: 5px;
+  border: solid #86CCEA;
+}
+.choose:hover{
+  border: solid orange;
+  background-color: #86CCEA;
+  border-radius: 5px;
+}
+label{
+  text-align: center;
+}
+.button1{
+  background-color: blueviolet;
+}
+td{
+  padding: 8px;
+}
