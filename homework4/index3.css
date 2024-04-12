@@ -14,9 +14,31 @@ label,input{
 label{
   text-align: center;
 }
-.button1{
-  background-color: blueviolet;
+#button1{
+  padding: 10px 15px; /* 添加内边距，使按钮看起来更饱满 */
+  margin: 5px; /* 添加外边距，为按钮之间提供空间 */
+  border: none; /* 移除默认边框 */
+  border-radius: 5px; /* 添加圆角效果 */
+  background-color: #00B2AB; /* 设置背景颜色 */
+  color: white; /* 设置文字颜色为白色 */
+  font-size: 16px; /* 设置字体大小 */
+  cursor: pointer; /* 改变鼠标指针为手形，表示可点击 */
+  transition: background-color 0.3s; /* 添加背景颜色变化的过渡效果 */
+}
+#button2{
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #DEBA89;
+  font-size:16px;
+  cursor: pointer;
+  border: none;
+  border-radius:5px;
+  transition: background-color 0.3s, color 0.2s, transform 0.4s;
 }
 td{
   padding: 8px;
 }
+button:hover {
+  background-image: linear-gradient(to right, #74ebd5, #4d8ff9); /* 鼠标悬停时改变渐变颜色 */
+}
+
