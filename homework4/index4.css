@@ -1,0 +1,15 @@
+table{
+  text-align: center;
+  border: 2px solid #f69e11;
+  border-collapse: collapse;
+  width: 70%;
+  border-radius: 35px;
+}
+td{
+  height: 3em;
+  background-color: rgb(182, 172, 157);
+}
+td:hover{
+  color: aliceblue;
+  background-color: cornflowerblue;
+}
