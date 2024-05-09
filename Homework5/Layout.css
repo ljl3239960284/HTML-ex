@@ -1,0 +1,51 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+}
+#header{
+  background-color: cadetblue;
+  color: aliceblue;
+  height: 50px;
+  width: auto;
+  text-align: center;
+}
+#container{
+  width: 1400px;
+  margin:2px auto;
+}
+#nav{
+  background-color: cornflowerblue;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+}
+#main{
+  background-color: bisque;
+  width: 100%;
+  height: 800px;
+  margin-top: 2px;
+}
+#left{
+  background-color: skyblue;
+  height: 796px;
+  width: 240px;
+  float: left;
+  margin: 2px;
+  text-align: center;
+}
+#right{
+  background-color: gainsboro;
+  height: 796px;
+  width: 1152px;
+  margin: 2px;
+  float:right;
+}
+#footer{
+  background-color: black;
+  height: 80px;
+  width: auto;
+  margin: 3px;
+  text-align: center;
+  color: white;
+}
