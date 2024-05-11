@@ -1,0 +1,45 @@
+/* styles.css */  
+  
+body {  
+  font-family: Arial, sans-serif;  
+  margin: 0;  
+  padding: 20px;  
+}  
+  
+header {  
+  background-color: red;  
+  color: white;  
+  padding: 10px;  
+  text-align: center;  
+}  
+  
+main {  
+  margin-top: 20px;  
+}  
+  
+table.striped-table {  
+  width: 100%;  
+  border-collapse: collapse;  
+}  
+  
+table.striped-table th,  
+table.striped-table td {  
+  padding: 8px;  
+  text-align: left;  
+  border-bottom: 1px solid #ddd;  
+}  
+  
+table.striped-table tr:nth-child(even) {  
+  background-color: #f2f2f2; /* 添加条纹效果 */  
+}  
+  
+footer {  
+  background-color: purple;  
+  color: white;  
+  padding: 10px;  
+  text-align: center;  
+  position: fixed;  
+  left: 0;  
+  bottom: 0;  
+  width: 100%;  
+}
