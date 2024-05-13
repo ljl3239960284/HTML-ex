@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>弹性布局表格</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+    .fixed-column {
+      width: 200px; /* 固定宽度 */
+    }
+    .elastic-column {
+      width: 1%; /* 弹性宽度 */
+      white-space: nowrap; /* 防止内容换行 */
+    }
+    /* 响应式设计：在屏幕宽度小于600px时，表格显示为堆叠样式 */
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      tr {
+        margin: 0 0 1rem 0;
+      }
+      td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+      }
+      td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th class="fixed-column">Name</th>
+    <th class="elastic-column">E-mail</th>
+    <th class="elastic-column">Status</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="fixed-column">Jayda Dibbert</td>
+    <td class="elastic-column">dalin@gmail.com</td>
+    <td class="elastic-column">Important</td>
+  </tr>
+  <!-- 其他行数据... -->
+  </tbody>
+</table>
+</body>
+</html>
