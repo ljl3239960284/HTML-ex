@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9x9 Multiplication Table</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table id="multiplicationTable">
+        <!-- 表头 -->
+        <tr>
+            <th>x</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+        </tr>
+        <!-- 乘法表内容将通过JavaScript动态生成 -->
+    </table>
+
+    <script>
+        function multiplicationTable() {
+            var table = document.getElementById('multiplicationTable');
+            for (let i = 1; i <= 9; i++) {
+                // 创建行
+                var row = table.insertRow(-1); // -1 表示在最后一行插入
+                // 创建表头单元格
+                var headerCell = row.insertCell(0);
+                headerCell.textContent = i;
+                // 创建数据单元格
+                for (let j = 1; j <= 9; j++) {
+                    var cell = row.insertCell(-1);
+                    cell.textContent = i * j;
+                }
+            }
+        }
+
+        // 页面加载完成后调用函数填充乘法表
+        window.onload = multiplicationTable;
+    </script>
+</body>
+</html>
