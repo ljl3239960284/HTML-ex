@@ -6,9 +6,13 @@
   </head>
   <body>
      <script>
-       function isLeapYear(int year){
-         
+       function isLeapYear(years){
+          if((years % 4 == 0 && years % 100 !== 0) || years % 400 == 0){
+            return true;
+          }else{
+            false;
+          }
        }
-      </script> 
+      </script>
   </body>
 </html>
