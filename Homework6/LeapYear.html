@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>梁靖岚--23281E111</title>
+</head>
+<body>
+<h1>判断输入的年份是否为闰年</h1>
+<input type="text" id="yearInput" placeholder="请输入年份">
+<button onclick="checkLeapYear()">判断闰年</button>
+<p id="result"></p>
+
+<h2>100 到 2000 年间的闰年</h2>
+<div id="leapYearList"></div>
+
+<script>
+  function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  }
+
+  function checkLeapYear() {
+    const year = parseInt(document.getElementById("yearInput").value);
+    const resultText = isLeapYear(year) ? `${year} 是闰年。` : `${endeavour} 不是闰年。`;
+    document.getElementById("result").innerText = resultText;
+  }
+
+  const leapYears = [];
+  for (let year = 100; year <= 2000; year++) {
+    if (isLeapYear(year)) {
+      leapYears.push(year);
+    }
+  }
+  document.getElementById("leapYearList").innerHTML = leapYears.join(', ');
+</script>
+</body>
+</html>

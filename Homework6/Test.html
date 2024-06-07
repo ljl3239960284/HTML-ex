@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button{
+      height:30px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h3>数组方法验证</h3>
+  <button onClick="testJoin()">join()方法</button>
+  <button onClick="testPush()">push()方法</button>
+  <button onClick="testPop()">pop()方法</button>
+  <button onClick="testShift()">shift()方法</button>
+  <button onClick="testUnshift()">unshift()方法</button>
+  <button onClick="testSlice()">slice()方法</button>
+  <button onClick="testSpliceDelete()">splice()方法(删除元素)</button>
+  <button onClick="testSpliceInsert()">splice()方法(插入元素)</button>
+  <button onClick="testSpliceReplace()">splice()方法(替换元素)</button>
+  <button onClick="testFilter()">filter()方法</button>
+  <button onClick="testConcat()">concat()方法</button>
+  <button onClick="testIndexOf()">indexOf()方法</button>
+  <button onClick="testLastIndexOf()">lastIndexOf()方法</button>
+  <button onClick="testEvery()">every()方法</button>
+  <button onClick="testSome()">some()方法</button>
+  <button onClick="testSort()">sort()方法</button>
+  <button onClick="testReverse()">reverse()方法</button>
+</div>
+</body>
+<script>
+  var score = new Array(1,2,3,4,5,6)
+  console.log("原始数组：", score);
+
+  function testJoin(){
+    console.log('join()方法的返回值：',this.score.join('-'));
+  }
+  function testPush(){
+    console.log('push()方法的返回值：',this.score.push(22,33));
+  }
+  function testPop(){
+    console.log('pop()方法的返回值：',this.score.pop());
+  }
+  function testShift(){
+    console.log('shift()方法的返回值：',this.score.shift());
+  }
+  function testUnshift(){
+    console.log('unshift()方法的返回值：',this.score.unshift(88,99,100,101));
+  }
+  function testSlice(){
+    console.log('slice()方法的返回值：',this.score.slice(3,5));
+  }
+  function testSpliceDelete(){
+    console.log('splice()方法的返回值(删除)：',this.score.splice(3,2));
+  }
+  function testSpliceInsert(){
+    console.log('splice()方法的返回值(插入)：',this.score.splice(4,0,33,44,55));
+  }
+  function testSpliceReplace(){
+    console.log('splice()方法的返回值(替换)：',this.score.splice(5,2,11,22,77));
+  }
+  function testFilter(){
+    console.log('filter()方法的返回值：',this.score.filter(function(val, index) { return index % 2 == 0 || parseInt(val) >= 15;}));
+  }
+  function testConcat(){
+    console.log('concat()方法的返回值：',this.score.concat(200,300,[2,3,4],[4,5,6]));
+  }
+  function testIndexOf(){
+    console.log('indexOf()方法的返回值：',this.score.indexOf(22,3));
+  }
+  function testLastIndexOf(){
+    console.log('lastIndexOf()方法的返回值：',this.score.lastIndexOf(22));
+  }
+  function testEvery(){
+    console.log('every()方法的返回值：',this.score.every(function(val) { return parseInt(val) > 100;}));
+  }
+  function testSome(){
+    console.log('some()方法的返回值：',this.score.some(function(val) { return parseInt(val) > 100;}));
+  }
+  function testSort(){
+    console.log('sort()方法的返回值：',this.score.sort(this.compare));
+  }
+  function compare(val1, val2){
+    if (val1 < val2) return -1
+    else if (val1 > val2) return 1
+    else return 0
+  }
+  function testReverse(){
+    console.log('reverse()方法的返回值：',this.score.reverse());
+  }
+</script>
+</html>

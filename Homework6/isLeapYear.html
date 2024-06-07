@@ -5,14 +5,28 @@
       <title>梁靖岚--23281E111</title>
   </head>
   <body>
+  <div>
+      <h2>闰年</h2>
+      <p id="leapYears"></p>
+  </div>
+
+
+
      <script>
        function isLeapYear(years){
           if((years % 4 == 0 && years % 100 !== 0) || years % 400 == 0){
             return true;
           }else{
-            false;
+            return false;
           }
        }
+       const leapYears = [];
+       for(let year = 100 ; year <= 2000;year++){
+         if(isLeapYear(year)){
+           leapYears.push(year);
+         }
+       }
+       document.getElementById("leapYears").innerHTML = leapYears.join(',');
       </script>
   </body>
 </html>
