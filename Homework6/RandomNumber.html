@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>23281E111-梁靖岚</title>
+</head>
+<body>
+<h1>生成20个随机数</h1>
+<button onclick="RandomNum()">生成并判断</button>
+<div id="RandomNum"></div>
+<p id="MaxNum"></p>
+<p id="MinNum"></p>
+  <script>
+    function RandomNum(){
+      var num = new Array(20);
+      for (i=0;i<20;i++){
+        num[i] = Math.floor(Math.random()*100);
+      }
+      let max = Math.max(...num);
+      let min = Math.min(...num);
+      document.getElementById('RandomNum').innerHTML = num;
+      document.getElementById('MaxNum').innerHTML = 'the site of max number is: '+num.indexOf(max);
+      document.getElementById('MinNum').innerHTML = 'the site of min number is: '+num.indexOf(min);
+    }
+
+  </script>
+
+</body>
+</html>
