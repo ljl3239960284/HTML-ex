@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>23281E111-梁靖岚</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div>
+  <label for="courseCode">课程代码:</label>
+  <input type="text" id="courseCode">
+  <label for="courseName">课程名称:</label>
+  <input type="text" id="courseName">
+  <label for="score">成绩:</label>
+  <input type="text" id="score">
+  <button onclick="addCourse()">添加</button>
+</div>
+<table id="courseTable" border="1">
+  <thead>
+  <tr>
+    <th>序号</th>
+    <th>课程代码</th>
+    <th>课程名称</th>
+    <th>成绩</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td>100845</td>
+    <td>高等数学</td>
+    <td>87</td>
+    <td><button onclick="editCourse(this)">编辑</button><button onclick="deleteCourse(this)">删除</button></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>100846</td>
+    <td>大学英语</td>
+    <td>78</td>
+    <td><button onclick="editCourse(this)">编辑</button><button onclick="deleteCourse(this)">删除</button></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>100847</td>
+    <td>数据结构</td>
+    <td>92</td>
+    <td><button onclick="editCourse(this)">编辑</button><button onclick="deleteCourse(this)">删除</button></td>
+  </tr>
+  </tbody>
+</table>
+<script src="script.js"></script>
+</body>
+</html>
